@@ -40,6 +40,16 @@ class RegisterController extends Controller
     }
 
     /**
+     * get request to register page
+     * showing register form
+     */
+
+    public function showRegistrationForm()
+    {
+        return view('register');
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data

@@ -25,20 +25,21 @@
 }
 
 .loginContainer{
-    background-color: white;
-    -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+    width: 100%;
+    max-width: 360px;
+    margin: 160px auto;
 }
 
 
 .loginBox{
+    background: #fff;
+    padding: 16px;
     background-color: white;
     -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 80px;
 }

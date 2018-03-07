@@ -1,0 +1,191 @@
+body{
+    margin: 0; !important;
+}
+
+
+.navigation {
+    background: #f4f5f6;
+    border-bottom: .1rem solid #d1d1d1;
+    display: block;
+    height: 5.2rem;
+    left: 0;
+    max-width: 100%;
+    position: fixed;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.navigation:hover{
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+
+a {
+    color: #9b4dca;
+    text-decoration: none
+}
+
+a:focus, a:hover {
+    color: #606c76
+}
+
+body, html {
+    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%
+}
+
+*, :after, :before {
+    box-sizing: inherit
+}
+
+
+.title {
+    font-size: 2rem;
+    line-height: 5.2rem;
+    padding: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    text-decoration: none
+}
+
+body {
+    background-color: #e0e0e0;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6
+}
+
+a {
+    background-color: transparent
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+.intro {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    top: 25rem;
+    text-align: center
+}
+
+h2#illusion {
+    font-size: 3.3rem
+}
+
+.intro > #illusion {
+    animation: type 2s steps(18), blink .5s infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 15ch;
+    border-right: 3px solid
+}
+
+@keyframes type {
+    0% {
+        width: 0
+    }
+    10% {
+        width: 0
+    }
+    20% {
+        width: 0
+    }
+    30% {
+        width: 0
+    }
+    40% {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+a.fadeIn {
+    padding: .75em 2em;
+    border-radius: 2em;
+    display: inline-block;
+    background-color: #903bc4;
+    transition: all .15s ease;
+    box-sizing: border-box;
+    border: 1px solid #903bc4;
+    margin: 1em 0;
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    animation: opac 1s;
+    animation-fill-mode: both
+}
+
+a.fadeIn, a.fadeIn:hover {
+    color: #fff
+}
+
+a.wait-2s {
+    animation-delay: 2.2s
+}
+
+@keyframes opac {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+.box {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Create the hidden pseudo-element */
+/* include the shadow for the end state */
+.box::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Scale up the box */
+.box:hover {
+    transform: scale(1.2, 1.2);
+}
+
+/* Fade in the pseudo-element with the bigger shadow */
+.box:hover::after {
+    opacity: 1;
+}

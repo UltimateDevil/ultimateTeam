@@ -9,9 +9,12 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    {{--external css--}}
     <link href="http://localhost/ultimateTeam/resources/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="http://localhost/ultimateTeam/resources/assets/css/style.css" rel="stylesheet" type="text/css">
 
+    {{--external js--}}
     <script type="text/javascript" src="http://localhost/ultimateTeam/resources/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="http://localhost/ultimateTeam/resources/assets/js/bootstrapjs.min.js"></script>
 
@@ -22,6 +25,10 @@
     <div class="overlay">
         <div class="loginContainer">
             <div class="loginBox">
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
                 <form>
                     <div class="form-group">
                         <label for="name">Name :</label>

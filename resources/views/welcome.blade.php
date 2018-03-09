@@ -14,7 +14,7 @@
         <link href="http://localhost/ultimateTeam/resources/assets/css/welcome.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid content">
 
             <div class="navigation">
                 <nav>
@@ -24,10 +24,14 @@
 
             <div class="intro">
                 <h2 id="illusion">We are Ultimate..........</h2><br>
-                <a class="fadeIn wait-2s">
+                <a class="fadeIn wait-2s" href="{{ url('login') }}">
                     Login
                 </a>
             </div>
+
+            {{--<div class="navigation" id="footer">
+
+            </div>--}}
         </div>
     </body>
 </html>

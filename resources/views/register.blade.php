@@ -25,29 +25,34 @@
     <div class="overlay">
         <div class="loginContainer">
             <div class="loginBox">
-                <div class="alert alert-success alert-dismissible">
+                @if(count($errors)>1)
+                <div class="alert alert-danger alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success!</strong> Indicates a successful or positive action.
+                    <strong>Oops!</strong>Something went wrong.
+                    {{print_r($errors)}}
                 </div>
-                <form>
+                @endif
+                <form action="{{url('admin/register/user')}}" method="post">
+                    {{ csrf_field() }}
+
                     <div class="form-group">
                         <label for="name">Name :</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" name="name" class="form-control" id="name">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" name="email" class="form-control" id="email">
                     </div>
 
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
+                        <input type="password" name="password" class="form-control" id="pwd">
                     </div>
 
                     <div class="form-group">
                         <label for="cpwd">Confirm Password:</label>
-                        <input type="password" class="form-control" id="cpwd">
+                        <input type="password" name="password_confirmation" class="form-control" id="cpwd">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

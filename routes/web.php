@@ -25,8 +25,8 @@ Route::get('/', function () {
         Only admin can access this page
 ============================================================*/
 
-Route::get('admin/register/user', 'Auth\RegisterController@showRegistrationForm')->name('registerUser');
-Route::post('admin/register/user', 'Auth\RegisterController@registerUser');
+Route::get('admin/register/user', 'Ultimate\RegisterController@showRegistrationForm')->name('registerUser');
+Route::post('admin/register/user', 'Ultimate\RegisterController@register')->name('register');
 
 /*=========================================================
                     LOGIN
@@ -37,3 +37,7 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

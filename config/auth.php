@@ -41,6 +41,12 @@ return [
             'provider' => 'users',
         ],
 
+        //Our new custom driver.
+        'web_ultimate' => [
+            'driver' => 'session',
+            'provider' => 'sellers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -70,6 +76,11 @@ return [
             'model' => App\User::class,
         ],
 
+        //Ultimate user provider
+        'ultimates' => [
+            'driver' => 'eloquent',  //We are using eloquent model
+            'model' => App\Ultimate::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
